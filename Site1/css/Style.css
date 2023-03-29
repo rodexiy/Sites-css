@@ -1,0 +1,50 @@
+.showBoxModel {
+    color: white;
+    background-color: rgb(227, 212, 125);
+}
+
+.Hide {
+    padding: 0px;
+    margin: 0px;
+    color: white;
+}
+
+.pad {
+    background-color: rgb(109, 109, 109);
+    padding: 15px;
+
+}
+
+.mar {
+    background-color: rgb(197, 143, 143);
+    padding: 15px;
+
+}
+
+
+.bord {
+    background-color: rgb(159, 0, 0);
+    padding: 15px;
+
+}
+
+
+body{
+    background-color: black;
+}
+
+
+.comprarButton {
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(0, 88, 88);
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.comprarButton:Hover{
+    border-color: black;
+    background-color: white;
+    color: rgb(0, 88, 88);
+}

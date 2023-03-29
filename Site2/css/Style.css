@@ -1,0 +1,20 @@
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: black;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 95%;
+        background-color: blue;
+    }
+}
+
+@media (max-width: 760px) {
+    .container {
+        width: 100%;
+        background-color: red;
+    }
+}
