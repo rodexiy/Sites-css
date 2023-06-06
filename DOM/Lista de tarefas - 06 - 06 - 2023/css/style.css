@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+#botao-adicionar {
+    margin-left: 10px;
+    padding: 5px;
+}
+
+#lista-tarefas {
+    margin-top: 20px;
+}
+
+.tarefa {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid  #5f61ff;
+    color: rgb(0, 0, 0);
+    border-radius: 4px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.removerTarefa {
+    font-size: 1.5rem;
+    margin-right: 50px;
+    border: solid #5f61ff;
+    background-color: #5f61ff;
+    border-radius: 10px;
+    padding: 5px 35px 5px 35px;
+    color: white;
+    cursor: pointer;
+
+}
