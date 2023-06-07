@@ -1,4 +1,7 @@
 body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     font-family: Arial, sans-serif;
     padding: 20px;
 }
@@ -8,12 +11,41 @@ body {
     margin: 0;
 }
 #botao-adicionar {
-    margin-left: 10px;
-    padding: 5px;
+    align-self: center;
+    font-size: 1.25rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #5f61ff;
+    color: white;
+    border: 1px solid;
+    border-radius: 10px;
+    transition: 0.25s;
+    width: 15%;
+}
+
+#botao-adicionar:hover {
+    transform: scale(1.05);
 }
 
 #lista-tarefas {
     margin-top: 20px;
+}
+
+#campo-tarefa {
+    padding-left: 5%;
+    width: 80%;
+
+    height: 45px;
+    border-radius: 25px;
+    border: 1px solid rgb(0, 0, 0)
+}
+
+.conjunto{
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .tarefa {
@@ -22,7 +54,7 @@ body {
     padding: 10px;
     border: 1px solid  #5f61ff;
     color: rgb(0, 0, 0);
-    border-radius: 4px;
+    border-radius: 35px;
     list-style-type: none;
     display: flex;
     justify-content: space-between;
@@ -31,12 +63,21 @@ body {
 
 .removerTarefa {
     font-size: 1.5rem;
-    margin-right: 50px;
+    margin-right: 20px;
     border: solid #5f61ff;
     background-color: #5f61ff;
     border-radius: 10px;
     padding: 5px 35px 5px 35px;
     color: white;
     cursor: pointer;
+}
 
+.concluida{
+    color:#5ecd0f;
+    border-color: #5ecd0f;
+}
+
+.concluida_remover{
+    background-color: #5ecd0f;
+    border-color: #5ecd0f;
 }
