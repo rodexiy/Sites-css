@@ -32,7 +32,7 @@ body {
 }
 
 #campo-tarefa {
-    padding-left: 5%;
+    padding-left: 25px;
     width: 80%;
 
     height: 45px;
@@ -81,3 +81,4 @@ body {
     background-color: #5ecd0f;
     border-color: #5ecd0f;
 }
+
