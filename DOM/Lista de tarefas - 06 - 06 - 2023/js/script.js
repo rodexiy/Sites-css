@@ -1,19 +1,43 @@
 const botaoAdicionar = document.getElementById("botao-adicionar")
 const listaTarefas = document.querySelector("#lista-tarefas")
 const campoTarefa = document.querySelector("#campo-tarefa")
+const mudarTema = document.getElementById("mudarTema")
 
 function newUserData() {
-    let userData = {
+    let UserData = {
         tarefas: {},
         indiceAtual: 1,
+        temaCor: "tema-claro"
     }
 
-    return userData
+    return UserData
 }
 
 let UserData = localStorage.getItem("UserData") ? JSON.parse(localStorage.getItem("UserData")) : newUserData()
 
+function ClearData() {
+    UserData = newUserData()
+    localStorage.clear()
+}
+
 console.log(UserData)
+
+document.body.className = UserData.temaCor
+
+mudarTema.addEventListener("click", function() {
+    console.log("a")
+
+    if (UserData.temaCor == "tema-claro") {
+        UserData.temaCor = "tema-escuro"
+    }else {
+        UserData.temaCor = "tema-claro"
+    }
+
+    console.log(UserData.temaCor)
+
+    document.body.className = UserData.temaCor
+})
+
 
 function newTarefa(titulo, descricao){
     let tarefa = {
