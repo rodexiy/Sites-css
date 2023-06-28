@@ -1,0 +1,48 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.jogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+}
+.imagem {
+    width: 100%;
+}
+
+#imagemCarro {
+    width: 100%;
+}
+
+#respostas{
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.resposta {
+    width: 100%;
+    /* text-align: center; */
+    border-radius: 12px;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 2px solid black;
+}
+
