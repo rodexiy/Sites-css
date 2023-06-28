@@ -44,6 +44,18 @@ const questoes = {
         Correta: "488",
         Pontos: 1
     },
+
+    [3]: {
+        Imagem: "/Assets/ZL1.webp",
+        Respostas: [
+            "Camaro",
+            "GT 2000",
+            "GTR R35",
+            "Eclipse"
+        ],
+        Correta: "488",
+        Pontos: 1
+    },
 }
 
 function Acertou() {
