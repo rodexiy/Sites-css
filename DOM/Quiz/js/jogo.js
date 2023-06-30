@@ -1,11 +1,17 @@
 const imagemCarro = document.getElementById("imagemCarro")
 const respostas = document.getElementById("respostas")
+const comecar2 = document.getElementById("comecar2")
+const divNome = document.getElementById("divNome")
+const jogo = document.getElementById("jogo")
 
 let Pontos = 0;
 let Nome = ""
 
+// localStorage.clear()
 let Rank = localStorage.getItem("Rank") ? JSON.parse(localStorage.getItem("Rank")) : []
 
+
+console.log(Rank)
 let questaoAtual = 1;
 
 const questoes = {
@@ -48,19 +54,30 @@ const questoes = {
     [3]: {
         Imagem: "/Assets/ZL1.webp",
         Respostas: [
-            "Camaro",
+            "ZL1",
             "GT 2000",
             "GTR R35",
             "Eclipse"
         ],
-        Correta: "488",
+        Correta: "ZL1",
         Pontos: 1
     },
 }
 
+
 function Acertou() {
     Pontos += questoes[questaoAtual].Pontos
 
+}
+
+function Ultima() {
+    let data = {
+        Nome: Nome,
+        Pontos: Pontos
+    };
+
+    Rank.push(data)
+    window.location.href = "/index.html"
 }
 
 
@@ -74,7 +91,7 @@ function RespostaEscolhida(resposta) {
     
 
     if (questaoAtual== Object.keys(questoes).length) {
-
+        Ultima()
     }else {
         questaoAtual += 1
         carregar()
@@ -106,8 +123,33 @@ function carregar() {
     }
 }
 
-carregar()
+
+function salvarNome(nome) {
+
+    if (nome.length > 0) {
+        Nome = nome
+        return true
+    }
+
+
+    return false
+}
+
+
+const NomeInput = document.getElementById("NomeInput")
+comecar2.addEventListener("click", function() {
+    if (salvarNome(NomeInput.value)) {
+        divNome.style.display = "none"
+        jogo.style.display = "flex"
+
+        carregar()
+
+    }
+    
+    
+})
+
 
 window.addEventListener('beforeunload', function (e) {
-    localStorage.setItem("UserData", JSON.stringify(UserData))
+    localStorage.setItem("Rank", JSON.stringify(Rank))
 });

@@ -11,12 +11,19 @@ body{
     justify-content: center;
 }
 
-.jogo {
-    display: flex;
+#jogo {
+    display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     width: 50%;
+}
+
+#divNome {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 .imagem {
     width: 100%;
@@ -33,7 +40,10 @@ body{
     justify-content: center;
     flex-direction: column;
     width: 100%;
+}
 
+table, td, tr {
+    border: 1px solid black;
 }
 
 .resposta {
