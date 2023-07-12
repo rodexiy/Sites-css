@@ -12,20 +12,15 @@ const inputEstado = document.getElementById("estado")
 
 const botaoEnviar = document.getElementById("enviar")
 
-
-// const consultaViaCEP = fetch("https://viacep.com.br/ws/89255250/json/")
-//     .then(resposta => resposta.json())
-//     .then(r =>{ 
-//         if (r.erro) { 
-//             throw Error("Esse CEP não existe");
-//         }else {
-//             console.log(r);
-//         }
-//     })
-//     .catch(err => console.log(err))
-//     .finally(mensagem => console.log("Processamento concluido"));
+const divErro = document.getElementById("erro")
 
 
+
+divErro.innerHTML = ""
+function errorMessage(message) {
+    divErro.style.display = "block"
+    divErro.innerHTML = message
+}
 
 async function buscaEndereco(cep) {
     try {
@@ -33,7 +28,7 @@ async function buscaEndereco(cep) {
         const consultaCEP = await _consultaCEP.json()
 
         if (consultaCEP.erro) {
-            console.log("Ocorreu um erro")
+            errorMessage("CEP não existe")
             throw Error("CEP não existe")
         }
         
@@ -44,7 +39,7 @@ async function buscaEndereco(cep) {
 
         return consultaCEP
     } catch(erro){
-        
+        errorMessage("CEP inválido")
         return "error"
     }
 

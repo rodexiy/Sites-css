@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-conteudo{
+
+    margin-top: 50px;
+    gap: 100%;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.card-collumn{
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.group{
+    display: flex;
+}
+
+.mini-group{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.card-clima{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    width: 30%;
+    padding: 45px 25px 50px 25px;
+    border-radius: 15px;
+    
+    background-color: rgb(89, 139, 214);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo {
+    font-size: 1.2rem;
+}
+
+.dados {
+    font-size: 0.9rem;
+}
+
+.icon{
+    font-size: 2rem;
+}
+
+
+
+.climaAtual{
+    font-size: 1.75rem;
+}
+
+#input-area{
+    display: flex;
+    gap: 20px;
+}
+
+#card-input{
+    border-radius: 5px;
+    border: 0px;
+}
+
+#card-button{
+    background-color: whitesmoke;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.nomeCidade{
+    font-size: 2.5rem;
+}
